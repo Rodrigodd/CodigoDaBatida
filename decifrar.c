@@ -54,6 +54,7 @@ void limpar_dados() {
     input_atual[1] = 0;
     input_ant[0] = 0;
     input_ant[1] = 0;
+    input_num = 0;
     cursor = 0;
     lcd_cmd(L_CLR);
     buzzer_delay = 0;
@@ -82,6 +83,7 @@ void ler_input() {
         input_num++;
     } else if (a == 12) {
         limpar_dados();
+        start_buzzer();
     }
     holding = a != 255;
 }
